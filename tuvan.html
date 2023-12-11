@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thông tin người dùng</title>
+</head>
+<body>
+  <h1>Nhập thông tin của bạn</h1>
+  
+  <form id="userInfoForm">
+    <label for="fullName">Họ và tên:</label>
+    <input type="text" id="fullName"><br><br>
+    
+    <label for="phoneNumber">Số điện thoại:</label>
+    <input type="text" id="phoneNumber"><br><br>
+
+    <label for="fullName">gmail:</label>
+    <input type="text" id="gmail"><br><br>
+    
+    <button type="button" onclick="submitUserInfo()">Gửi thông tin</button>
+  </form>
+  
+  <div id="displayUserInfo"></div>
+
+  <script>
+    function submitUserInfo() {
+      const fullName = document.getElementById('fullName').value;
+      const phoneNumber = document.getElementById('phoneNumber').value;
+      const gmail = document.getElementById('gmail').value;
+      
+
+      const displayUserInfo = document.getElementById('displayUserInfo');
+      displayUserInfo.innerHTML = `<p>Họ và tên: ${fullName}</p><p>Số điện thoại: ${phoneNumber}</p><p>gmail: ${gmail}`;
+    }
+  </script>
+</body>
+</html>
